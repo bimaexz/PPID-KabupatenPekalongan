@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Joomla\Component\Gmapfp\Administrator\Field">
+
+	<fieldset name="basic">
+		<field name="gmapfp_plug_config" 
+			type="Subformconfigplugin"
+			label="COM_GMAPFP_MAP_PARAMETER"
+			default=""
+			filter="raw"/>
+	</fieldset>
+
+</form>

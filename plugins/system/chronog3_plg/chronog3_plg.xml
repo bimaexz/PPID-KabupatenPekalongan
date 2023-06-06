@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>ChronoG3_Plg</name>
+	<author>chronoengine.com</author>
+	<creationDate>2020</creationDate>
+	<copyright>2020 chronoengine.com All rights reserved.</copyright>
+	<license>GPL v2</license>
+	<authorEmail>chronoengine.com</authorEmail>
+	<authorUrl>chronoengine.com</authorUrl>
+	<version>1.0</version>
+	<description>Load the ChronoEngine GCore3 framework, this plugin must be enabled for the Chrono extensions to function properly.</description>
+	<scriptfile>script.chronog3_plg.php</scriptfile>
+	<files>
+		<file plugin="chronog3_plg">chronog3_plg.php</file>
+		<folder>chronog3</folder>
+    	<filename>script.chronog3_plg.php</filename>
+    	<filename>index.html</filename>
+	</files>
+</extension>

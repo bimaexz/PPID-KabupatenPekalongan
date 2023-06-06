@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_GMAPFP_CATEGORY_VIEW_BLOG_TITLE" option="COM_GMAPFP_CATEGORY_VIEW_BLOG_OPTION">
+		<help key = "JHELP_MENUS_MENU_ITEM_ARTICLE_CATEGORY_BLOG" />
+		<message>
+			<![CDATA[COM_GMAPFP_CATEGORY_VIEW_BLOG_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+		>
+			<field
+				name="id"
+				type="modal_category"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				extension="com_gmapfp"
+				required="true"
+				select="true"
+				new="true"
+				edit="true"
+				clear="true"
+			/>
+			<field
+				name="perso_id"
+				type="modal_personnalisation"
+				label="COM_GMAPFP_FIELD_SELECT_PERSO_LABEL"
+				select="true"
+				new="true"
+				edit="true"
+				clear="true"
+				addfieldprefix="Joomla\Component\Gmapfp\Administrator\Field"
+			/>
+			<field
+				name="filter_tag"
+				type="tag"
+				label="JTAG"
+				description="JTAG_FIELD_SELECT_DESC"
+				multiple="true"
+			/>
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="JGLOBAL_CATEGORY_OPTIONS">
+
+			<field
+				name="show_category_title"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_TITLE"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_description"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_description_image"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="maxLevel"
+				type="list"
+				label="JGLOBAL_MAXLEVEL_LABEL"
+				useglobal="true"
+				>
+				<option value="-1">JALL</option>
+				<option value="0">JNONE</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+			</field>
+
+			<field
+				name="show_empty_categories"
+				type="list"
+				label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_no_articles"
+				type="list"
+				label="COM_GMAPFP_NO_ARTICLES_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_category_heading_title_text"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_subcat_desc"
+				type="list"
+				label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_cat_num_articles"
+				type="list"
+				label="COM_GMAPFP_NUMBER_CATEGORY_ITEMS_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_cat_tags"
+				type="list"
+				label="COM_GMAPFP_FIELD_SHOW_CAT_TAGS_LABEL"
+				useglobal="true"
+				class="chzn-color"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="page_subheading"
+				type="text"
+				label="JGLOBAL_SUBHEADING_LABEL"
+				size="20"
+			/>
+
+		</fieldset>
+
+		<fieldset name="advanced" label="JGLOBAL_LIST_LAYOUT_OPTIONS">
+			<field
+				name="show_pagination_limit"
+				type="list"
+				label="JGLOBAL_DISPLAY_SELECT_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="filter_field"
+				type="list"
+				label="JGLOBAL_FILTER_FIELD_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="hide">JHIDE</option>
+				<option value="title">JGLOBAL_TITLE</option>
+				<option value="author">JAUTHOR</option>
+				<option value="hits">JGLOBAL_HITS</option>
+	 			<option value="tag">JTAG</option>
+			</field>
+
+			<field
+				name="show_headings"
+				type="list"
+				label="JGLOBAL_SHOW_HEADINGS_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_image_heading"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_SHOW_IMAGE_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_email_headings"
+				type="list"
+				label="JGLOBAL_EMAIL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_telephone_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_PHONE_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_address_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_ADRESSE_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_suburb_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_SUBURB_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_cp_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_CP_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_state_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_STATE_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_country_headings"
+				type="list"
+				label="COM_GMAPFP_FIELD_CONFIG_COUNTRY_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="list_show_date"
+				type="list"
+				label="JGLOBAL_SHOW_DATE_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="created">JGLOBAL_CREATED</option>
+				<option value="modified">JGLOBAL_MODIFIED</option>
+				<option value="published">JPUBLISHED</option>
+			</field>
+
+			<field
+				name="date_format"
+				type="text"
+				label="JGLOBAL_DATE_FORMAT_LABEL"
+				description="JGLOBAL_DATE_FORMAT_DESC"
+				size="15"
+				useglobal="true"
+			/>
+
+			<field
+				name="list_show_hits"
+				type="list"
+				label="JGLOBAL_LIST_HITS_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="list_show_author"
+				type="list"
+				label="JGLOBAL_LIST_AUTHOR_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="spacer1"
+				type="spacer"
+				hr="true"
+			/>
+
+			<field
+				name="orderby_pri"
+				type="list"
+				label="JGLOBAL_CATEGORY_ORDER_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="none">JGLOBAL_NO_ORDER</option>
+				<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+				<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+				<option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+			</field>
+
+			<field
+				name="orderby_sec"
+				type="list"
+				label="JGLOBAL_ARTICLE_ORDER_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="front">COM_GMAPFP_FEATURED_ORDER</option>
+				<option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+				<option value="date">JGLOBAL_OLDEST_FIRST</option>
+				<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+				<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+				<option value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+				<option value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+				<option value="hits">JGLOBAL_MOST_HITS</option>
+				<option value="rhits">JGLOBAL_LEAST_HITS</option>
+				<option value="random">JGLOBAL_RANDOM_ORDER</option>
+				<option value="order">JGLOBAL_ORDERING</option>
+				<option	value="rorder">JGLOBAL_REVERSE_ORDERING</option>
+			</field>
+
+			<field
+				name="order_date"
+				type="list"
+				label="JGLOBAL_ORDERING_DATE_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="created">JGLOBAL_CREATED</option>
+				<option value="modified">JGLOBAL_MODIFIED</option>
+				<option value="published">JPUBLISHED</option>
+			</field>
+
+			<field
+				name="show_pagination"
+				type="list"
+				label="JGLOBAL_PAGINATION_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				useglobal="true"
+				class="custom-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="display_num"
+				type="list"
+				label="JGLOBAL_NUMBER_ITEMS_LIST_LABEL"
+				default="10"
+				validate="options"
+				useglobal="true"
+				>
+				<option value="5">J5</option>
+				<option value="10">J10</option>
+				<option value="15">J15</option>
+				<option value="20">J20</option>
+				<option value="25">J25</option>
+				<option value="30">J30</option>
+				<option value="50">J50</option>
+				<option value="100">J100</option>
+				<option value="0">JALL</option>
+			</field>
+
+			<field
+				name="show_featured"
+				type="list"
+				label="JGLOBAL_SHOW_FEATURED_ARTICLES_LABEL"
+				useglobal="true"
+				default=""
+				validate="options"
+				>
+				<option value="show">JSHOW</option>
+				<option value="hide">JHIDE</option>
+				<option value="only">JONLY</option>
+			</field>
+
+			<field
+				name="map_position"
+				type="list"
+				label="COM_GMAPFP_FIELD_MAP_POSITION_LABEL"
+				useglobal="true"
+				default=""
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">COM_GMAPFP_FIELD_MAP_POSITION_TOP_LABEL</option>
+				<option value="2">COM_GMAPFP_FIELD_MAP_POSITION_BOTTOM_LABEL</option>
+			</field>
+		</fieldset>
+
+		<fieldset
+			name="articles"
+			label="JGLOBAL_ARTICLES"
+			description="COM_GMAPFP_CONFIG_ARTICLE_SETTINGS_DESC"
+			>
+			
+			<field
+				name="article_layout"
+				type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				class="custom-select"
+				menuitems="true"
+				extension="com_gmapfp"
+				view="item"
+				useglobal="true"
+			/>
+
+			<field
+				name="spacer_show_icons"
+				type="spacer"
+				hr="true"
+			/>
+			
+			<field 
+				name="show_email_form" 
+				type="list" 
+				default="" 
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true" 
+				label="COM_GMAPFP_AFFICHER_ICON_MSG" 
+				description="COM_GMAPFP_AFFICHER_ICON_MSG_DESC"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field 
+				name="show_hp_form" 
+				type="list" 
+				default="" 				
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true" 
+				label="COM_GMAPFP_AFFICHER_ICON_HORAIRES_PRIX" 
+				description="COM_GMAPFP_AFFICHER_ICON_HORAIRES_PRIX_DESC"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field 
+				name="show_map_form" 
+				type="list" 
+				default="" 				
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true" 
+				label="COM_GMAPFP_AFFICHER_ICON_CARTE" 
+				description="COM_GMAPFP_AFFICHER_ICON_CARTE_DESC"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field
+				name="spacer_title"
+				type="spacer"
+				hr="true"
+			/>
+
+			<field
+				name="show_title"
+				type="list"
+				label="JGLOBAL_SHOW_TITLE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="info_block_position"
+				type="list"
+				label="COM_GMAPFP_FIELD_INFOBLOCK_POSITION_LABEL"
+				default=""
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				>
+				<option value="0">GMAPFP_FIELD_OPTION_ABOVE</option>
+				<option value="1">GMAPFP_FIELD_OPTION_BELOW</option>
+				<option value="2">GMAPFP_FIELD_OPTION_SPLIT</option>
+			</field>
+
+			<field
+				name="coordinates_icons"
+				type="list"
+				label="COM_GMAPFP_FIELD_ICONS_SETTINGS_LABEL"
+				default=""
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				>
+				<option value="0">GMAPFP_FIELD_VALUE_ICONS</option>
+				<option value="1">GMAPFP_FIELD_VALUE_TEXT</option>
+				<option value="2">GMAPFP_FIELD_VALUE_NONE</option>
+			</field>
+
+			<field
+				name="info_block_show_title"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_category"
+				type="list"
+				label="JGLOBAL_SHOW_CATEGORY_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="link_category"
+				type="list"
+				label="JGLOBAL_LINK_CATEGORY_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				showon="show_category:1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_parent_category"
+				type="list"
+				label="JGLOBAL_SHOW_PARENT_CATEGORY_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="link_parent_category"
+				type="list"
+				label="JGLOBAL_LINK_PARENT_CATEGORY_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				showon="show_parent_category:1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="spacer2"
+				type="spacer"
+				hr="true"
+			/>
+
+			<field
+				name="show_associations"
+				type="list"
+				label="JGLOBAL_SHOW_ASSOCIATIONS_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="flags"
+				type="list"
+				label="JGLOBAL_SHOW_FLAG_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				showon="show_associations:1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="spacer3"
+				type="spacer"
+				hr="true"
+			/>
+
+			<field
+				name="show_author"
+				type="list"
+				label="JGLOBAL_SHOW_AUTHOR_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="link_author"
+				type="list"
+				label="JGLOBAL_LINK_AUTHOR_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				showon="show_author:1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_create_date"
+				type="list"
+				label="JGLOBAL_SHOW_CREATE_DATE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_modify_date"
+				type="list"
+				label="JGLOBAL_SHOW_MODIFY_DATE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_publish_date"
+				type="list"
+				label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_item_navigation"
+				type="list"
+				label="JGLOBAL_SHOW_NAVIGATION_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_readmore"
+				type="list"
+				label="JGLOBAL_SHOW_READMORE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_readmore_title"
+				type="list"
+				label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				showon="show_readmore:1"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="readmore_limit"
+				type="number"
+				label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL"
+				default="100"
+				showon="show_readmore:1[AND]show_readmore_title:1"
+			/>
+
+			<field
+				name="show_tags"
+				type="list"
+				label="COM_GMAPFP_FIELD_SHOW_TAGS_LABEL"
+				id="show_tags"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="spacer4"
+				type="spacer"
+				hr="true"
+			/>
+
+			<field
+				name="show_hits"
+				type="list"
+				label="JGLOBAL_SHOW_HITS_LABEL"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="record_hits"
+				type="list"
+				label="JGLOBAL_RECORD_HITS_LABEL"
+				description="JGLOBAL_RECORD_HITS_DESC"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="show_noauth"
+				type="list"
+				label="JGLOBAL_SHOW_UNAUTH_LINKS_LABEL"
+				description="JGLOBAL_SHOW_UNAUTH_LINKS_DESC"
+				class="custom-select-color-state"
+				validate="options"
+				useglobal="true"
+				default=""
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

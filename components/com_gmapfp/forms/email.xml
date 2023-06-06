@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="email" addruleprefix="Joomla\Component\Gmapfp\Site\Rule" label="COM_GMAPFP_DISPLAY_MSG">
+		<field
+			name="spacer"
+			type="spacer"
+			label="COM_GMAPFP_REQUIRED"
+			class="text"
+		/>
+
+		<field
+			name="name"
+			type="text"
+			label="COM_GMAPFP_EMAIL_NOM"
+			id="name"
+			size="30"
+			filter="string"
+			required="true"
+		/>
+
+		<field
+			name="email"
+			type="email"
+			label="COM_GMAPFP_EMAIL"
+			id="email"
+			size="30"
+			filter="string"
+			validate="Email"
+			autocomplete="email"
+			required="true"
+		/>
+
+		<field
+			name="subject"
+			type="text"
+			label="COM_GMAPFP_EMAIL_SUJET"
+			id="emailmsg"
+			size="60"
+			filter="string"
+			validate="EmailSubject"
+			required="true"
+		/>
+
+		<field
+			name="message"
+			type="textarea"
+			label="COM_GMAPFP_EMAIL_MESSAGE"
+			cols="50"
+			rows="10"
+			id="message"
+			filter="safehtml"
+			validate="EmailMessage"
+			required="true"
+		/>
+
+		<field
+			name="email_copy"
+			type="checkbox"
+			label="COM_GMAPFP_EMAIL_A_COPY"
+			id="email-copy"
+			default="0"
+		/>
+	</fieldset>
+
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_GMAPFP_CAPTCHA_LABEL"
+			validate="captcha"
+			namespace="gmapfp"
+		/>
+	</fieldset>
+</form>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="quickicon" method="upgrade">
+	<name>plg_quickicon_gmapfp</name>
+	<author>Fabrice4821</author>
+	<authorEmail>support@gmapfp.org</authorEmail>
+	<authorUrl>https://creation-web.pro/</authorUrl>
+	<copyright>Copyright (C) 2011 - 2019 by GMapFP</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>4.0.0</version>
+	<description>PLG_QUICKICON_GMAPFP_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="gmapfp">gmapfp.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_quickicon_gmapfp.ini</language>
+		<language tag="en-GB">language/en-GB/plg_quickicon_gmapfp.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_quickicon_gmapfp.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_quickicon_gmapfp.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="context"
+					type="text"
+					label="PLG_QUICKICON_GMAPFP_GROUP_LABEL"
+					description="PLG_QUICKICON_GMAPFP_GROUP_DESC"
+					default="site_quickicon"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

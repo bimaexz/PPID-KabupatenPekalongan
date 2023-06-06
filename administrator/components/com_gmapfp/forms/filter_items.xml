@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Joomla\Component\GMapFP\Administrator\Field">
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_GMAPFP_GMAPFPS_FILTER_SEARCH_LABEL"
+			description="COM_GMAPFP_GMAPFPS_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="state"
+			type="status"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+
+		<field
+			name="ville"
+			type="sql"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT ville FROM #__gmapfp WHERE ville != '' ORDER BY ville"
+			key_field="ville"
+			value_field="ville"
+			>
+			<option value="">GMAPFP_SELECT_VILLE</option>
+		</field>
+
+		<field
+			name="departement"
+			type="sql"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT departement FROM #__gmapfp WHERE departement != '' ORDER BY departement"
+			key_field="departement"
+			value_field="departement"
+			>
+			<option value="">GMAPFP_SELECT_DEPARTEMENT</option>
+		</field>
+
+		<field
+			name="pays"
+			type="sql"
+			onchange="this.form.submit();"
+			query="SELECT DISTINCT pays FROM #__gmapfp WHERE pays != '' ORDER BY pays"
+			key_field="pays"
+			value_field="pays"
+			>
+			<option value="">GMAPFP_SELECT_PAYS</option>
+		</field>
+
+		<field
+			name="catid"
+			type="category"
+			label="JOPTION_SELECT_CATEGORY"
+			multiple="true"
+			extension="com_gmapfp"
+			layout="joomla.form.field.list-fancy-select"
+			hint="JOPTION_SELECT_CATEGORY"
+			onchange="this.form.submit();"
+			published="0,1,2"
+		/>
+
+		<field
+			name="author_id"
+			type="author"
+			multiple="true"
+			layout="joomla.form.field.list-fancy-select"
+			hint="JOPTION_SELECT_AUTHOR"
+			addfieldprefix="Joomla\Component\Gmapfp\Administrator\Field"
+			onchange="this.form.submit();"
+			>
+			<option value="0">JNONE</option>
+		</field>
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JOPTION_SELECT_LANGUAGE"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_LANGUAGE</option>
+			<option value="*">JALL</option>
+		</field>
+
+		<field
+			name="tag"
+			type="tag"
+			multiple="true"
+			label="JOPTION_SELECT_TAG"
+			hint="JOPTION_SELECT_TAG"
+			mode="nested"
+			custom="false"
+			onchange="this.form.submit();"
+		/>
+
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			statuses="*,0,1,2,-2"
+			onchange="this.form.submit();"
+			default="a.title ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">JGRID_HEADING_ORDERING_ASC</option>
+			<option value="a.ordering DESC">JGRID_HEADING_ORDERING_DESC</option>
+			<option value="a.state ASC">JSTATUS_ASC</option>
+			<option value="a.state DESC">JSTATUS_DESC</option>
+			<option value="a.title ASC">JGLOBAL_TITLE_ASC</option>
+			<option value="a.title DESC">JGLOBAL_TITLE_DESC</option>
+			<option value="a.ville ASC">GMAPFP_HEADING_VILLE_ASC</option>
+			<option value="a.ville DESC">GMAPFP_HEADING_VILLE_DESC</option>
+			<option value="a.departement ASC">GMAPFP_HEADING_DEP_ASC</option>
+			<option value="a.departement DESC">GMAPFP_HEADING_DEP_DESC</option>
+			<option value="a.pays ASC">GMAPFP_HEADING_PAYS_ASC</option>
+			<option value="a.pays DESC">GMAPFP_HEADING_PAYS_DESC</option>
+			<option value="u.name ASC">JAUTHOR_ASC</option>
+			<option value="u.name DESC">JAUTHOR_DESC</option>
+			<option value="category_title ASC">JCATEGORY_ASC</option>
+			<option value="category_title DESC">JCATEGORY_DESC</option>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini custom-select"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

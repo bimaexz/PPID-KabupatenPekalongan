@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_JMGQUESTIONNAIRE_FILTER_SEARCH_LABEL"
+			description="COM_JMGQUESTIONNAIRE_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+			onchange="this.form.submit();"
+		/>
+
+		<field
+			name="category_id"
+			type="category"
+			label="JOPTION_FILTER_CATEGORY"
+			description="JOPTION_FILTER_CATEGORY_DESC"
+			extension="com_jmgquestionnaire"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		
+		<field name="questionnaireid" 
+			type="questionnairesoptions"
+			required="true"
+			label="COM_JMGQUESTIONNAIRE_QUESTIONNAIRE_SELECT"
+			description="COM_JMGQUESTIONNAIRE_QUESTIONNAIRE_SELECT"
+			onchange="this.form.submit();"
+		/>
+		
+		<field name="questionid" 
+			type="questionsoptions"
+			required="true"
+			label="COM_JMGQUESTIONNAIRE_QUESTION_SELECT"
+			description="COM_JMGQUESTIONNAIRE_QUESTION_SELECT"
+			onchange="this.form.submit();"
+		/>
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JOPTION_FILTER_LANGUAGE"
+			description="JOPTION_FILTER_LANGUAGE_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_LANGUAGE</option>
+			<option value="*">JALL</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			statuses="*,0,1,2,-2"
+			onchange="this.form.submit();"
+			default="a.uniqueid ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.created ASC">COM_JMGQUESTIONNAIRE_HEADING_CREATED_ASC</option>
+			<option value="a.created DESC">COM_JMGQUESTIONNAIRE_HEADING_CREATED_DESC</option>
+			<option value="answers ASC">COM_JMGQUESTIONNAIRE_ANSWERS_ASC</option>
+			<option value="answers DESC">COM_JMGQUESTIONNAIRE_ANSWERS_DESC</option>
+			<option value="respondent ASC">COM_JMGQUESTIONNAIRE_RESPONDENTS_ASC</option>
+			<option value="respondent DESC">COM_JMGQUESTIONNAIRE_RESPONDENTS_DESC</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_JMG_MENUCARD_LIST_LIMIT"
+			description="COM_JMG_MENUCARD_LIST_LIMIT_DESC"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

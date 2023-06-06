@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="params">
+	<fieldset name="basic" addfieldprefix="Joomla\Plugin\GmapfpMap\Google\Field">
+		<field name="gmapfp_google_key" type="text" default="" label="PLG_GMAPFP_GOOGLE_KEY" class="input-xxlarge" description="PLG_GMAPFP_GOOGLE_KEY_DESC" />
+
+		<field
+			name="center"
+			type="Mapcentergoogle"
+			label="PLG_GMAPFP_MAP_GOOGLE_CENTER_LABEL"
+			description="PLG_GMAPFP_MAP_GOOGLE_CENTER_DESC"
+			default=""
+			height="300"
+		/>
+		<field
+			name="lat"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_GOOGLE_LAT_LABEL"
+			default="47.92933252158822"
+		/>
+		<field
+			name="lng"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_GOOGLE_LNG_LABEL"
+			default="2.1391642837122617"
+		/>
+		<field
+			name="zoom"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_GOOGLE_ZOOM_LABEL"
+			default="10"
+		/>
+
+		<field name="gmapfp_normal" type="radio" default="1" label="PLG_GMAPFP_NORMAL" description="PLG_GMAPFP_NORMAL_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="gmapfp_satellite" type="radio" default="1" label="PLG_GMAPFP_SATELLITE" description="PLG_GMAPFP_SATELLITE_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="gmapfp_hybrid" type="radio" default="1" label="PLG_GMAPFP_HYBRID" description="PLG_GMAPFP_HYBRID_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="gmapfp_physic" type="radio" default="1" label="PLG_GMAPFP_PHYSIC" description="PLG_GMAPFP_PHYSIC_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="gmapfp_choix_affichage_carte" type="list" default="1" label="PLG_GMAPFP_AFFICHAGE_CARTE" description="PLG_GMAPFP_AFFICHAGE_CARTE_DESC">
+			<option value="1">PLG_GMAPFP_NORMAL</option>
+			<option value="2">PLG_GMAPFP_SATELLITE</option>
+			<option value="3">PLG_GMAPFP_HYBRID</option>
+			<option value="4">PLG_GMAPFP_PHYSIC</option>
+		</field>
+		<field name="gmapfp_directions" type="radio" default="1" label="PLG_GMAPFP_DIRECTION" description="PLG_GMAPFP_DIRECTION_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="gmapfp_doubleClickZoom"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_DOUBLE_CLICK_ZOOM_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_keyboard"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_KEYBOARD_ZOOM_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_scrollWheelZoom"
+			type="list"
+			label="PLG_GMAPFP_MAP_GOOGLE_SCROLL_ZOOM_LABEL"
+			default="1"
+			>
+			<option value="ctrl">PLG_GMAPFP_MAP_GOOGLE_SCROLL_BY_CTRL_ZOOM_LABEL</option>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_zoomControl"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_ZOOM_BUTTON_SHOW_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field
+			name="gmapfp_dragging"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_DRAGGIN_MAP_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+			name="gmapfp_scale"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_SHOW_SCALE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_fullscreenControl"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_SHOW_FULLSCREEN_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_street_view"
+			type="radio"
+			label="PLG_GMAPFP_MAP_GOOGLE_SHOW_STREET_VIEW_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+	</fieldset>
+</form>

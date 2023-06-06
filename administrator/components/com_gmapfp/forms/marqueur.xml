@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="number" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="nom" type="text"
+			label="COM_GMAPFP_NOM"
+			required="true" 
+			class="input-medium"
+		/>
+
+		<field
+			name="alias"
+			type="hidden"
+			label="JFIELD_ALIAS_LABEL"
+			size="45"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+		/>
+
+		<field name="url_type" type="list" label="COM_GMAPFP_MARKER_URL_TYPE"
+			default="0"
+		>
+			<option value="0">GMAPFP_MARKER_URL_EXTERNE</option>
+			<option value="1">GMAPFP_MARKER_URL_INTERNE</option>
+		</field>
+
+		<field name="url_externe" type="text"
+			label="COM_GMAPFP_URL"
+			description="COM_GMAPFP_EXTERNAL_URL_DESC"
+			class="input-xxlarge"
+			showon="url_type:0"
+		/>
+		<field name="url_interne" type="media"
+			label="COM_GMAPFP_URL"
+			class="input-xxlarge"
+			directory="/images/gmapfp/marqueurs/"
+			showon="url_type:1"
+		/>
+		<field name="url" type="hidden"
+			label="COM_GMAPFP_URL"
+			required="true"
+			class="input-xxlarge"
+		/>
+
+		<field name="marker_width" type="text"
+			label="X : "
+			readonly="true"
+		/>
+
+		<field name="marker_height" type="text"
+			label="Y : "
+			readonly="true"
+		/>
+
+		<field name="centre_x" type="integer"
+			label="X : "
+			first="0" last="200" step="1"
+			required="true"
+			onchange="RafraichirCentre_x()"
+		/>
+
+		<field name="centre_y" type="integer"
+			label="Y : "
+			first="0" last="200" step="1"
+			required="true"
+			onchange="RafraichirCentre_y()"
+		/>
+
+		<field name="url_shadow" type="hidden"
+			label="COM_GMAPFP_URL_SHADOW"
+			class="input-xxlarge"
+			onchange="RafraichirOmbre()"
+		/>
+
+		<field name="shadow_width" type="hidden"
+			label="X : "
+			readonly="true"
+		/>
+
+		<field name="shadow_height" type="hidden"
+			label="Y : "
+			readonly="true"
+		/>
+
+		<field
+				name="optimized"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_GMAPFP_OPTIMIZED"
+				description="COM_GMAPFP_OPTIMIZED_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+
+		<field name="state" type="list" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC" class="custom-select-color-state"
+			filter="intval" size="1" default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		
+		<field
+			name="ordering"
+			type="ordering"
+			label="JFIELD_ORDERING_LABEL"
+			content_type="com_gmapfp.marker"
+		/>
+
+		<field name="note10" type="note" label="COM_GMAPFP_MARKER_SIZE" />
+		<field name="note11" type="note" label="COM_GMAPFP_CENTRE" description="COM_GMAPFP_CENTRE_DESC" />
+
+	</fieldset>
+</form>

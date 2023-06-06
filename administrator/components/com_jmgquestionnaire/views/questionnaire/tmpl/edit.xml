@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JMGQUESTIONNAIRE_ADD_NEW_QUESTION">
+		<message>COM_JMGQUESTIONNAIRE_ADD_NEW_QUESTION_DESC</message>
+	</layout>
+	<fields
+			name="request"
+			addfieldpath="/administrator/components/com_jmgquestionnaire/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="modal_question"
+					required="true"
+					label="COM_JMGQUESTIONNAIRE_ADD_NEW_QUESTION"
+					description="COM_JMGQUESTIONNAIRE_ADD_NEW_QUESTION"
+					/>
+		</fieldset>
+	</fields>
+</metadata>

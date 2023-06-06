@@ -1,0 +1,19 @@
+/* GMAPFP CSS */
+/* J4 */
+
+.gmapfp-address dd {
+	padding-left: 30px;
+}
+
+.com-gmapfp-item {
+	padding: 15px;
+}
+.container-component .com-gmapfp-item {
+	padding: 0;
+}
+
+.btn-action {
+    color: #fff !important;
+    background-color: #132f53 !important;
+    border-color: #132f53 !important;
+}

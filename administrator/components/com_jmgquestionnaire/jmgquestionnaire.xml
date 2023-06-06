@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension type="component" version="3.0.0" method="upgrade">
+
+    <name>com_jmgquestionnaire</name>
+    <creationDate>December 2021</creationDate>
+    <author>Otto Szekeres</author>
+    <authorEmail>info@joomega.com</authorEmail>
+    <authorUrl>http://www.joomega.com</authorUrl>
+    <copyright>2021 - 2027 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+    <version>1.0.22</version>
+    <description>COM_JMGQUESTIONNAIRE_XML_DESCRIPTION</description>
+    
+    <scriptfile>script.installer.php</scriptfile>
+    
+    <updateservers>
+		<server type="extension" priority="1" name="JMG Questionnaire">
+			https://update.joomega.com/com_jmgquestionnaire/extension.xml
+		</server>
+	</updateservers>
+    
+    <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+    	<folder>views</folder>
+    	<folder>helpers</folder>
+    	<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+        <filename>jmgquestionnaire.php</filename>
+        <filename>controller.php</filename>
+    </files>
+    
+    <media destination="com_jmgquestionnaire" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>img</folder>
+	</media>
+
+    <administration>
+        <menu link="option=com_jmgquestionnaire" option="com_jmgquestionnaire">COM_JMGQUESTIONNAIRE</menu>
+        <submenu>
+            <menu link="option=com_jmgquestionnaire&amp;view=jmgquestionnaire">COM_JMGQUESTIONNAIRE_SUBMENU_DASHBOARD</menu>
+            <menu link="option=com_jmgquestionnaire&amp;view=questionnaires">COM_JMGQUESTIONNAIRE_SUBMENU_QUESTIONNAIRES</menu>
+            <menu link="option=com_jmgquestionnaire&amp;view=questions">COM_JMGQUESTIONNAIRE_SUBMENU_QUESTIONS</menu>
+			<menu link="option=com_jmgquestionnaire&amp;view=answers">COM_JMGQUESTIONNAIRE_SUBMENU_ANSWERS</menu>
+			<menu link="option=com_jmgquestionnaire&amp;view=respondents">COM_JMGQUESTIONNAIRE_SUBMENU_RESPONDENTS</menu>
+			<menu link="option=com_jmgquestionnaire&amp;view=surveys">COM_JMGQUESTIONNAIRE_SUBMENU_SURVEYS</menu>
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_jmgquestionnaire">COM_JMGQUESTIONNAIRE_SUBMENU_CATEGORIES</menu>
+        </submenu>
+
+        <files folder="admin">
+           <folder>controllers</folder>
+           <folder>helpers</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>index.html</filename>
+            <filename>jmgquestionnaire.php</filename>
+            <filename>controller.php</filename>
+			<filename>config.xml</filename>
+       		<filename>access.xml</filename>
+        </files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jmgquestionnaire.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jmgquestionnaire.sys.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_jmgquestionnaire.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_jmgquestionnaire.sys.ini</language>
+		</languages>
+    </administration>
+
+</extension>
+

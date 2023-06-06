@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="content" method="upgrade" type="plugin" version="2.5">
+        <name>Content - Animate It!</name>
+        <author>eLEOPARD Design Studios Pvt. Ltd.</author>
+        <creationDate>July 2014</creationDate>
+        <copyright>Copyright (C) eleopard design studios pvt. ltd.  All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+        <authorEmail>support@eleopard.in</authorEmail>
+        <authorUrl>www.eleopard.in</authorUrl>
+        <version>2.4.0</version>
+        <description>
+        	<![CDATA[
+			<p>Plugin developed to convert the Animate It! generated tags to the corresponding div blocks.</p>						
+			]]>
+        	<p></p></description>
+        <files>
+                <filename plugin="edsanimate">edsanimate.php</filename>                                
+                <filename>index.html</filename>                         
+        </files>
+        
+        <config>
+			<fields name="params" addfieldpath="/plugins/system/edsanimate/assets/fields">
+				<fieldset name="description">
+					<field name="version" type="eds_version" extension="edsanimate" />
+					<field name="description" type="eds_description" extension="edsanimate" />					
+				</fieldset>
+			</fields>
+		</config>        
+</extension>

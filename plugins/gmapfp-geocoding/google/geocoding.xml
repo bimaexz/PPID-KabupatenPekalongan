@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="params">
+	<fieldset name="basic" addfieldprefix="Joomla\Plugin\GmapfpMap\Google\Field">
+		<field
+			name="gmapfp_google_key"
+			type="text"
+			label="PLG_GMAPFP-GEOCODING_GOOGLE_KEY_LABEL"
+			description="PLG_GMAPFP-GEOCODING_GOOGLE_KEY_DESC"
+			default=""
+			required="true"
+			filter="string"
+			class="input-xxlarge"
+		/>
+		<field 
+			name="note13" 
+			type="note" 
+			label="PLG_GMAPFP-GEOCODING_GOOGLE_LICENCE_LABEL" 
+			description="PLG_GMAPFP-GEOCODING_GOOGLE_LICENCE_DESC" 
+		/>
+	</fieldset>
+</form>

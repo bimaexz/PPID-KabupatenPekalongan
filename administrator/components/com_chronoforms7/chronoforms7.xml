@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7.0" method="upgrade">
+	<name>ChronoForms7</name>
+	<creationDate>Jan 2023</creationDate>
+	<author>Chronoman</author>
+	<copyright>ChronoEngine.com 2007 - 2023</copyright>
+	<authorEmail>webmaster@chronoengine.com</authorEmail>
+	<authorUrl>www.chronoengine.com</authorUrl>
+	<version>7.0.10</version>
+	<license>GPLv2</license>
+	<description>Build all kinds of forms using Chronoforms.</description>
+
+	<scriptfile>install.chronoforms7.php</scriptfile>
+	<uninstallfile>uninstall.chronoforms7.php</uninstallfile>
+	<files>
+		<filename>chronoforms7.php</filename>
+		<filename>index.html</filename>
+		<folder>views</folder>
+		<folder>chronoforms</folder>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">chronoforms/sql/install.chronoforms.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">chronoforms/sql/uninstall.chronoforms.sql</file>
+		</sql>
+	</uninstall>	
+	<administration>		
+		<menu link="com_chronoforms7" view="main">COM_CHRONOFORMS7</menu>
+		<files folder="admin">
+			<filename>chronoforms7.php</filename>
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>chronoforms</folder>
+			<folder>language</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_chronoforms7.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforms7.menu.ini</language>
+			<language tag="en-GB">language/en-GB.com_chronoforms7.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="1" name="ChronoForms v7 update server">http://www.chronoengine.com/chrono_joomla_updates/chronoforms7.xml</server>
+	</updateservers>
+</extension>

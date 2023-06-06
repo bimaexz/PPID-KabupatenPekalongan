@@ -1,0 +1,81 @@
+.intro-post-reviews a.ba-blog-post-rating-count,
+.ba-blog-post-reviews a.ba-blog-post-rating-count {
+    margin-left: 10px;
+    transition: color .3s;
+}
+
+.intro-post-wrapper .intro-post-info > span,
+.ba-blog-post-info-wrapper > span {
+    align-items: center;
+    position: relative;
+}
+
+.ba-blog-post-info-wrapper > .ba-blog-post-author ~ .ba-blog-post-author,
+.ba-item-post-intro .intro-post-info .intro-post-author ~ .intro-post-author {
+    margin-left: 20px;
+}
+
+.intro-post-reviews a.ba-blog-post-rating-count,
+.ba-blog-post-reviews a.ba-blog-post-rating-count,
+.ba-blog-post-info-wrapper > span a:hover,
+.intro-post-wrapper .intro-post-info > span a:hover,
+.ba-blog-post-info-wrapper > span a,
+.intro-post-wrapper .intro-post-info > span a {
+    color: inherit;
+}
+
+.ba-blog-post-info-wrapper .ba-author-avatar,
+.intro-post-wrapper .ba-author-avatar {
+    margin: 5px 10px 5px 0;
+}
+
+.ba-blog-post-info-wrapper,
+.ba-blog-post-info-wrapper  > span,
+.ba-blog-post-info-wrapper .ba-icons,
+.intro-post-wrapper .intro-post-info  > span {
+    cursor: default !important;
+}
+
+.ba-item-post-navigation .ba-blog-post-fields,
+.ba-item-post-intro .intro-post-info,
+.ba-blog-post-info-wrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ba-item-category-intro .intro-post-title-wrapper .ba-author-avatar,
+.ba-blog-post-info-wrapper .ba-author-avatar,
+.intro-post-info .ba-author-avatar {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.intro-post-info .ba-author-avatar,
+.ba-blog-post-info-wrapper .ba-author-avatar {
+    height: 30px;
+    width: 30px;
+}
+
+/* Author Social Link */
+.intro-category-author-social-wrapper a,
+.ba-post-author-social-wrapper a {
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.ba-blog-posts-pagination span.disabled a *,
+.ba-blog-posts-pagination span.disabled a,
+.intro-category-author-social-wrapper a:hover,
+.ba-post-author-social-wrapper a:hover {
+    opacity: .5;
+}
+
+.intro-post-reviews,
+.ba-blog-post-reviews {
+    align-items: center;
+}

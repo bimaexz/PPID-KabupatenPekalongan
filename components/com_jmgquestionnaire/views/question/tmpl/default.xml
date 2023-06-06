@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+
+    <layout title="COM_JMGQUESTIONNAIRE_QUESTION_TITLE">
+        <message>COM_JMGQUESTIONNAIRE_QUESTION_MESSAGE</message>
+    </layout>
+
+    <fields name="request"
+            addfieldpath="/administrator/components/com_jmgquestionnaire/models/fields">
+
+        <fieldset name="request">
+            <field name="id"
+                   type="questionnairesoptions"
+                   label="COM_JMGQUESTIONNAIRE_QUESTIONNAIRE_LABEL"
+                   description="COM_JMGQUESTIONNAIRE_QUESTIONNAIRE_DESC"
+                   required="true">
+            </field>
+        </fieldset>
+
+    </fields>
+    
+    	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="COM_JMGQUESTIONNAIRE_OPTIONS">	
+
+		</fieldset>
+	</fields>
+</metadata>

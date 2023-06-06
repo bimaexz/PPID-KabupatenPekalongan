@@ -1,0 +1,155 @@
+a {
+  color: #f50622;
+}
+a:hover {
+  color: #c3051b;
+}
+.sp-megamenu-parent >li.active>a,
+.sp-megamenu-parent >li:hover>a {
+  color: #f50622;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover {
+  background: #f50622;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #f50622;
+}
+.vina-camera-slider-k2 .camera_caption > div h3 a:hover,
+.vina-camera-slider-content .camera_caption > div h3 a:hover {
+  color: #f50622 !important;
+}
+#offcanvas-toggler >i {
+  color: #333333;
+}
+#offcanvas-toggler >i:hover {
+  color: #f50622;
+}
+.btn-primary,
+.sppb-btn-primary {
+  border-color: #d7051e;
+  background-color: #f50622;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #aa0418;
+  background-color: #c3051b;
+}
+ul.social-icons >li a:hover {
+  color: #f50622;
+}
+blockquote:before {
+  color: #f50622;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #333333;
+}
+.sp-module ul >li >a:hover {
+  color: #f50622;
+}
+.sp-module .latestnews >div >a {
+  color: #333333;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #f50622;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #f50622;
+}
+.latest-news-link .latestnews >div >a {
+  color: #333333;
+}
+.latest-news-link .latestnews >div >a:hover {
+  color: #f50622;
+}
+.dark-footer .sp-module ul >li >a {
+  color: #fff !important;
+}
+.dark-footer .sp-module ul >li >a:hover {
+  color: #f50622;
+}
+.dark-footer .sp-module .latestnews >div >a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+}
+.dark-footer .sp-module .latestnews >div >a:hover {
+  color: #f50622;
+}
+.dark-footer .sp-module .latestnews >div small {
+  font-size: 11px;
+  line-height: 12px;
+  color: #aaa;
+}
+.view-article .entry-header .entry-header-block i {
+  background: #f50622;
+}
+.view-article dl.article-info dd i {
+  background: #f50622;
+}
+.view-article ul.pagenav li.previous a,
+.view-article ul.pagenav li.next a {
+  background-color: #f50622;
+}
+.view-article ul.pagenav li.previous a:hover,
+.view-article ul.pagenav li.next a:hover {
+  background-color: #c3051b;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: #f50622;
+}
+.search .btn-toolbar button {
+  background: #f50622;
+}
+.post-format {
+  background: #f50622;
+}
+.voting-symbol span.star.active:before {
+  color: #f50622;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #c3051b;
+}
+.entry-link,
+.entry-quote {
+  background: #f50622;
+}
+blockquote {
+  border-color: #f50622;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #f50622;
+}
+#sp-footer {
+  background: #f50622;
+}
+.sp-comingsoon body {
+  background-color: #f50622;
+}
+.pagination>li>a,
+.pagination>li>span {
+  color: #333333;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #333333;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #f50622;
+  background-color: #f50622;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #f50622;
+  background-color: #f50622;
+}

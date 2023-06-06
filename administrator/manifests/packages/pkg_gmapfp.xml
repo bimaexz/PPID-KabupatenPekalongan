@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="4.0" method="upgrade">
+	<name>Package d installation de GMapFP version libre</name>
+	<packagename>GMapFP</packagename>
+    <author>Fabrice4821</author>
+	<version>4.10F</version>
+    <creationDate>Octobre 2022</creationDate>
+	<url>http://www.gmapfp.org</url>
+	<packager>Fabrice4821</packager>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<description>Affichage de cartes GMapFP</description>
+	<scriptfile>install.php</scriptfile>
+	<files>
+		<file type="component" 	id="com_gmapfp" >com_gmapfp_J4_10F.zip</file>
+		<file type="plugin"		id="plg_content_gmapfp_map" 	client="site">plg_content_gmapfp_map_J4_2F.zip</file>
+		<file type="plugin"		id="plg_editor-xtd_gmapfp_map" 	client="site">plg_editor-xtd_gmapfp_map_J4_0F.zip</file>
+		<file type="plugin"		id="plg_gmapfp-geocoding_ersi" 	client="site">plg_gmapfp-geocoding_ersi_J4_0F.zip</file>
+		<file type="plugin"		id="plg_gmapfp-geocoding_google" 	client="site">plg_gmapfp-geocoding_google_j4_0F.zip</file>
+		<file type="plugin"		id="plg_gmapfp-map_google" 	client="site">plg_gmapfp-map_google_J4_5F.zip</file>
+		<file type="plugin"		id="plg_gmapfp-map_openstreet" 	client="site">plg_gmapfp-map_openstreet_J4_6F.zip</file>
+		<file type="plugin"		id="plg_quickicon_gmapfp" 	client="site">plg_quickicon_gmapfp_J4_0F.zip</file>
+	</files>
+	<updateservers>
+		<server type="extension" priority="2" name="Package GMapFP J4 Free Update Server">http://gmapfp.org/updates/gmapfp4pkg_updater.xml</server>
+	</updateservers>
+</extension>

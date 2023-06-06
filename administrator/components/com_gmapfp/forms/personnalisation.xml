@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Joomla\Component\GMapFP\Administrator\Field">
+	<fieldset name="details">
+
+		<field
+			name="id"
+			type="number"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+
+		<field
+			name="nom"
+			type="text"
+			label="COM_GMAPFP_NOM"
+			class="input-xxlarge input-large-text"
+			size="40"
+			required="true"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			class="custom-select-color-state"
+			size="1"
+			default="1"
+			>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="intro_carte"
+			type="editor"
+			label="COM_GMAPFP_INTRO_CARTE"
+			description="COM_GMAPFP_INTRO_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,module,article,contact,menu"
+		/>
+
+		<field
+			name="conclusion_carte"
+			type="editor"
+			label="COM_GMAPFP_CONCLUSION_CARTE"
+			description="COM_GMAPFP_INTRO_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,module,article,contact,menu"
+		/>
+
+		<field
+			name="intro_detail"
+			type="editor"
+			label="COM_GMAPFP_INTRO_DETAIL"
+			description="COM_GMAPFP_INTRO_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,module,article,contact,menu"
+		/>
+
+		<field
+			name="conclusion_detail"
+			type="editor"
+			label="COM_GMAPFP_CONCLUSION_DETAIL"
+			description="COM_GMAPFP_INTRO_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,module,article,contact,menu"
+		/>
+
+	</fieldset>
+</form>

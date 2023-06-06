@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="system" method="upgrade" type="plugin" version="2.5">
+        <name>System - Animate It!</name>
+        <author>eLEOPARD Design Studios Pvt. Ltd.</author>
+        <creationDate>July 2014</creationDate>
+        <copyright>Copyright (C) eleopard design studios pvt. ltd.  All rights reserved.</copyright>
+        <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+        <authorEmail>support@eleopard.in</authorEmail>
+        <authorUrl>www.eleopard.in</authorUrl>
+        <version>2.4.0</version>
+        <description>
+        	<![CDATA[
+			<p>Plugin to Add Animate css and required javascript in the document. </p>						
+			]]>
+        	</description>
+        <files>
+                <filename plugin="edsanimate">edsanimate.php</filename>
+                <filename>index.html</filename>
+                <folder>assets</folder>                            
+        </files>       
+        <config>
+			<fields name="params" addfieldpath="/plugins/system/edsanimate/assets/fields">
+				<fieldset name="description">
+					<field name="version" type="eds_version" extension="edsanimate" />
+					<field name="description" type="eds_description" extension="edsanimate" />					
+				</fieldset>
+				<fieldset name="basic" Label= "Basic Configuration">
+					<field name="scroll_offset" type="text" label="Scroll Offset (in percentage)"
+						description="Percentage height of the element after which animation should get applied"
+						class="inputbox validate-numeric"
+						maxlength="5"
+						size = "5"
+						required="true" 
+						default= "75"
+					/>
+					
+					<field
+			            name="load_jquery"
+			            type="radio"
+			            class="btn-group"
+			            labelclass="control-label"
+			            label="Load jQuery Explicitly"
+			            description="This switch is added in order to avoid jQuery conflict especially for Joomla 2.5 users. Disabling this ensures that if the jQuery is already getting loaded by other plugins or components then it will not load jQuery explicitly."
+			            default = "1"			           
+			    	>
+			    	    <option value="0">No</option>
+			            <option value="1">Yes</option>
+			   		</field>
+			   		
+			   		<field
+				            name="enable_on_phone"
+				            type="radio"
+				            class="btn-group"
+				            labelclass="control-label"
+				            label="Enable on Phone"
+				            description="Animation should work on smartphones or not."
+				            default = "1" 
+				           
+				    	>
+				    	    <option value="0">No</option>
+				            <option value="1">Yes</option>
+				   	</field> 
+				   	<field
+				            name="enable_on_tab"
+				            type="radio"
+				            class="btn-group"
+				            labelclass="control-label"
+				            label="Enable on Tablet"
+				            description="Animation should work on tablets or not."
+				           	default = "1" 
+				    	>
+				    	    <option value="0">No</option>
+				            <option value="1">Yes</option>
+				   	</field>	
+	
+					<field
+				            name="hide_overflow_x"
+				            type="radio"
+				            class="btn-group"
+				            labelclass="control-label"
+				            label="Hide Horizontal Scroll"
+				            description="Hide horizontal scroll bar."
+				           	default = "1" 
+				    	>
+				    	    <option value="0">No</option>
+				            <option value="1">Yes</option>
+				   	</field>	
+				   	
+				   	<field
+				            name="hide_overflow_y"
+				            type="radio"
+				            class="btn-group"
+				            labelclass="control-label"
+				            label="Hide Vertical Scroll"
+				            description="Hide vertical scroll bar."
+				           	default = "0" 
+				    	>
+				    	    <option value="0">No</option>
+				            <option value="1">Yes</option>
+				   	</field>
+				   	
+				   	<field
+				            name="custom_css"
+				            type="textarea"				            
+				            labelclass="control-label"
+				            label="Custom CSS"
+				            description="Custom CSS to apply."
+				           	default = "" 
+				           	rows="10" 
+				           	cols="5"
+				    	>				    	    
+				   	</field>	
+				   			   		
+				</fieldset>
+			</fields> 
+		</config>
+</extension>

@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_gmapfp",
+  "version": "4.5.0",
+  "description": "Joomla CMS",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "com_gmapfp.admin_accueil",
+      "type": "script",
+      "uri": "com_gmapfp/admin_accueil.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.admin_manage",
+      "type": "script",
+      "uri": "com_gmapfp/admin_manage.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.form-edit",
+      "type": "script",
+      "uri": "com_gmapfp/form-edit.min.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.front-map",
+      "type": "script",
+      "uri": "com_gmapfp/front-map.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.gmapfp",
+      "type": "style",
+      "uri": "com_gmapfp/gmapfp.css",
+      "dependencies": [
+        "fontawesome"
+      ]
+    },
+    {
+      "name": "com_gmapfp.jquery.fancybox",
+      "type": "script",
+      "uri": "com_gmapfp/jquery.fancybox.min.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.jquery.fancybox",
+      "type": "style",
+      "uri": "com_gmapfp/jquery.fancybox.min.css"
+    },
+	{
+      "name": "com_gmapfp.admin-article-pagebreak",
+      "type": "script",
+      "uri": "com_gmapfp/admin-article-pagebreak.min.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.admin-marqueur-edit",
+      "type": "script",
+      "uri": "com_gmapfp/admin-marqueur-edit.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.admin-items-modal",
+      "type": "script",
+      "uri": "com_gmapfp/admin-items-modal.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.admin-plugin-modal.es6",
+      "type": "script",
+      "uri": "com_gmapfp/admin-plugin-modal.es6.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "nomodule": true,
+        "defer": true
+      }
+    },
+    {
+      "name": "com_gmapfp.admin-plugin-modal",
+      "type": "script",
+      "uri": "com_gmapfp/admin-plugin-modal.js",
+      "dependencies": [
+        "com_gmapfp.admin-plugin-modal.es6"
+      ],
+      "attributes": {
+        "type": "module"
+      }
+    },
+    {
+      "name": "com_gmapfp.admin-personnalisations-modal",
+      "type": "script",
+      "uri": "com_gmapfp/admin-personnalisations-modal.js",
+      "dependencies": [
+        "core"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+      "name": "fontawesome",
+      "type": "style",
+      "uri": "system/joomla-fontawesome.min.css"
+    }
+
+  ]
+}

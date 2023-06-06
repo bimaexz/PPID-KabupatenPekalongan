@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="gmapfp-map" method="upgrade">
+	<name>plg_gmapfp_map_openstreet</name>
+	<namespace>Joomla\Plugin\GmapfpMap\Openstreet</namespace>
+	<version>J4.6F</version>
+	<creationDate>Juillet 2022</creationDate>
+	<author>Fabrice4821</author>
+	<authorEmail>support@gmapfp.org</authorEmail>
+	<authorUrl>https://creation-web.pro/</authorUrl>
+	<copyright>Copyright (C) 2011 - 2019 by GMapFP</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_GMAPFP_MAP_OPENSTREET_XML_DESCRIPTION</description>
+	<scriptfile>install.php</scriptfile>
+	<files>
+		<filename plugin="openstreet">openstreet.php</filename>
+		<filename>osm.xml</filename>
+		<filename>map.xml</filename>
+		<folder>tmpl</folder>
+		<folder>Field</folder>
+	</files>
+
+    <media folder="media" destination="plg_gmapfp-map_openstreet">
+        <folder>js</folder>
+        <folder>leaflet</folder>
+    </media>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_gmapfp-map_openstreet.ini</language>
+		<language tag="en-GB">language/en-GB/plg_gmapfp-map_openstreet.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_gmapfp-map_openstreet.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_gmapfp-map_openstreet.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldprefix="Joomla\Plugin\GmapfpMap\Openstreet\Field">
+				<field name="gmapfp_plug_config" type="subform"
+					formsource="plugins/gmapfp-map/openstreet/map.xml" 
+					label="GMAPFP_MAP_PARAMETER"
+					default=""
+					filter="raw"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

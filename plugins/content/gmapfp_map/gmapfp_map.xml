@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_GMAPFP_MAP</name>
+    <creationDate>Octobre 2022</creationDate>
+    <author>Fabrice4821</author>
+    <authorEmail>support@gmapfp.org</authorEmail>
+    <authorUrl>http://www.gmapfp.org</authorUrl>
+    <license>GNU / GPL</license>
+    <version>J4_2F</version>
+    <description>PLG_CONTENT_GMAPFP_MAP_VOIR_DESCRIPTION_DANS_GESTIONNAIRE_PLUGINS_GMAPFP</description>
+    <files>
+        <filename plugin="gmapfp_map">gmapfp_map.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/plg_content_gmapfp_map.sys.ini</language>
+        <language tag="en-GB">en-GB/plg_content_gmapfp_map.sys.ini</language>
+        <language tag="fr-FR">fr-FR/plg_content_gmapfp_map.ini</language>
+        <language tag="en-GB">en-GB/plg_content_gmapfp_map.ini</language>
+    </languages>
+</extension>

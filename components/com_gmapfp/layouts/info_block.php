@@ -1,0 +1,67 @@
+<?php
+	/*
+	* GMapFP Component Google Map for Joomla! 4.0.x
+	* Version J4_0_0F
+	* Creation date: Octobre 2020
+	* Author: Fabrice4821 - www.gmapfp.org
+	* Author email: support@gmapfp.org
+	* License GNU/GPL
+	*/
+
+defined('JPATH_BASE') or die;
+
+use Joomla\CMS\Language\Text;
+
+$blockPosition = $displayData['params']->get('info_block_position', 0);
+
+?>
+<dl class="article-info text-muted">
+
+	<?php if ($displayData['position'] === 'above' && ($blockPosition == 0 || $blockPosition == 2)
+			|| $displayData['position'] === 'below' && ($blockPosition == 1)
+			) : ?>
+
+		<dt class="article-info-term">
+			<?php if ($displayData['params']->get('info_block_show_title', 1)) : ?>
+				<?php echo Text::_('COM_GMAPFP_ITEM_INFO'); ?>
+			<?php endif; ?>
+		</dt>
+
+		<?php if ($displayData['params']->get('show_author',1) && !empty($displayData['item']->author )) : ?>
+			<?php echo $this->sublayout('author', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_parent_category',1) && !empty($displayData['item']->parent_id)) : ?>
+			<?php echo $this->sublayout('parent_category', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_category',1)) : ?>
+			<?php echo $this->sublayout('category', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_associations',0)) : ?>
+			<?php echo $this->sublayout('associations', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_publish_date',1)) : ?>
+			<?php echo $this->sublayout('publish_date', $displayData); ?>
+		<?php endif; ?>
+
+	<?php endif; ?>
+
+	<?php if ($displayData['position'] === 'above' && ($blockPosition == 0)
+			|| $displayData['position'] === 'below' && ($blockPosition == 1 || $blockPosition == 2)
+			) : ?>
+		<?php if ($displayData['params']->get('show_create_date',1)) : ?>
+			<?php echo $this->sublayout('create_date', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_modify_date',1)) : ?>
+			<?php echo $this->sublayout('modify_date', $displayData); ?>
+		<?php endif; ?>
+
+		<?php if ($displayData['params']->get('show_hits',1)) : ?>
+			<?php echo $this->sublayout('hits', $displayData); ?>
+		<?php endif; ?>
+	<?php endif; ?>
+</dl>

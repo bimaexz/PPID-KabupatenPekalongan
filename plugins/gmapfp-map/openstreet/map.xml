@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="params">
+	<fieldset name="basic" label="PLG_GMAPFP_MAP_OSM_PARAMS_BASIC" addfieldprefix="Joomla\Plugin\GmapfpMap\Openstreet\Field">
+		<field
+			name="center"
+			type="Mapcenterosm"
+			label="PLG_GMAPFP_MAP_OPENSTREET_CENTER_LABEL"
+			description="PLG_GMAPFP_MAP_OPENSTREET_CENTER_DESC"
+			default=""
+			height="300"
+		/>
+		<field
+			name="lat"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_OPENSTREET_LAT_LABEL"
+			default="47.92933252158822"
+		/>
+		<field
+			name="lng"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_OPENSTREET_LNG_LABEL"
+			default="2.1391642837122617"
+		/>
+		<field
+			name="zoom"
+			type="hidden"
+			label="PLG_GMAPFP_MAP_OPENSTREET_ZOOM_LABEL"
+			default="7"
+		/>
+		<field
+			name="gmapfp_doubleClickZoom"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_DOUBLE_CLICK_ZOOM_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_keyboard"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_KEYBOARD_ZOOM_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_scrollWheelZoom"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_SCROLL_ZOOM_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_zoomControl"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_ZOOM_BUTTON_SHOW_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field
+			name="gmapfp_dragging"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_DRAGGIN_MAP_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="closePopupOnClick"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_CLOSE_POPUP_CLICK_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+		<field
+			name="gmapfp_attributionControl"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_ATTRIBUTION_SHOW_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field
+			name="gmapfp_metric"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_SHOW_METRIC_SCALE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field
+			name="gmapfp_imperial"
+			type="radio"
+			label="PLG_GMAPFP_MAP_OPENSTREET_SHOW_IMPERIAL_SCALE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="gmapfp_osm_layers" type="subform"
+			formsource="plugins/gmapfp-map/openstreet/osm.xml" multiple="true"
+			label="GMAPFP_OSM_LAYER_LABEL" description="GMAPFP_OSM_LAYER_DESC"
+			default='{
+				"__field20":{"name":"Route","alias":"OSM","url":"//{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png","attribution":"© &#8249;a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap&#8249;/a> contributors","max_zoom":"20"},
+				"__field21":{"name":"Satelite","alias":"esri_sat","url":"//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}","attribution":"©  &#8249;a href=\"http://www.esri.com/\" target=\"_blank\">Esri&#8249;/a>i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community","max_zoom":"19"}
+				}'
+				filter="raw"/>
+		
+	</fieldset>
+</form>

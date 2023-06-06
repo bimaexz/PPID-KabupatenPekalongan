@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset 
+		name="map_config" label="COM_GMAPFP_CONF_MAP"
+		addfieldprefix="Joomla\Component\Gmapfp\Administrator\Field">
+
+		<field name="gmapfp_height" type="text" default="500" label="COM_GMAPFP_HEIGHT" size="10" description="COM_GMAPFP_HEIGHT_DESC" />
+		<field name="gmapfp_width" type="text" default="100%" label="COM_GMAPFP_WIDTH" size="10" description="COM_GMAPFP_WIDTH_DESC" />
+		<field
+			name="plugin_geocoding_name"
+			type="plugins"
+			label="COM_GMAPFP_PLUGIN_GEOCODING"
+			folder="gmapfp-geocoding"
+			default="google"
+			onchange="Joomla.submitbutton('component.apply')"
+		/>
+		<field
+			name="bp_geocoding"
+			type="Configplug"
+			layout="geocoding"
+			default="search-location"
+			class="btn btn-outline-secondary"
+			label="COM_GMAPFP_PLUG_GEOCODING_CONF"
+		/>
+		<field
+			name="plugin_map_name"
+			type="plugins"
+			label="COM_GMAPFP_PLUGIN_MAP"
+			folder="gmapfp-map"
+			default="google"
+			onchange="Joomla.submitbutton('component.apply')"
+		/>
+		<field
+			name="bp_map"
+			type="Configplug"
+			layout="map"
+			default="map"
+			class="btn btn-outline-secondary"
+			label="COM_GMAPFP_PLUG_MAP_CONF"
+		/>
+		<field name="gmapfp_auto" type="radio" default="1" label="COM_GMAPFP_AUTO" description="COM_GMAPFP_AUTO_DESC" class="btn-group">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="gmapfp_zoom" type="list" default="0" label="COM_GMAPFP_ZOOM" description="COM_GMAPFP_ZOOM_DESC">
+			<option value="0">COM_GMAPFP_AUTO_ZOOM</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+		</field>
+		<field name="gmapfp_zoom_lightbox_carte" type="list" default="0" label="COM_GMAPFP_ZOOM_LIGHTBOX_CARTE" description="COM_GMAPFP_ZOOM_LIGHTBOX_CARTE_DESC">
+			<option value="0">COM_GMAPFP_SAME_ZOOM</option>
+			<option value="100">COM_GMAPFP_MAP_ZOOM</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+		</field>
+		<field name="gmapfp_zoom_lightbox_imprimer" type="list" default="0" label="COM_GMAPFP_ZOOM_LIGHTBOX_IMPRIMER" description="COM_GMAPFP_ZOOM_LIGHTBOX_IMPRIMER_DESC">
+			<option value="0">COM_GMAPFP_SAME_ZOOM</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset
+		name="map_param"
+		label="COM_GMAPFP_BULLET_PARAM"
+		description="COM_GMAPFP_BULLET_ZONE">
+		
+		<field name="gmapfp_eventcontrol" type="list" default="1" label="COM_GMAPFP_EVENTCONTROL" description="COM_GMAPFP_EVENTCONTROL_DESC">
+			<option value="0">Click</option>
+			<option value="1">MouseOver</option>
+			<option value="2">COM_GMAPFP_MANUAL_CLOSURE</option>
+		</field>
+		<field name="gmapfp_width_bulle_GMapFP" type="text" default="400" label="COM_GMAPFP_LARGEUR_BULLE_GMAPFP" size="10" />
+		<field name="gmapfp_min_height_bulle_GMapFP" type="text" default="150" label="COM_GMAPFP_HAUTEUR_MIN_BULLE_GMAPFP" size="10" />
+		<field name="gmapfp_max_height_bulle_GMapFP" type="text" default="350" label="COM_GMAPFP_HAUTEUR_MAX_BULLE_GMAPFP" size="10" />
+		<field name="affichage" type="list" default="0" label="COM_GMAPFP_TYPE_AFFICHAGE" description="COM_GMAPFP_TYPE_AFFICHAGE_DESC">
+			<option value="0">COM_GMAPFP_AFFICHAGE_COMPLET</option>
+			<option value="1">COM_GMAPFP_AFFICHAGE_DETAILS</option>
+			<option value="2">COM_GMAPFP_AFFICHAGE_MESSAGE</option>
+			<option value="3">COM_GMAPFP_AFFICHAGE_TITRE</option>
+		</field>
+		<field name="gmapfp_taille_bulle_cesure" type="text" default="200" label="COM_GMAPFP_TAILLE_CESURE" size="10" description="COM_GMAPFP_TAILLE_CESURE_DESC" />
+		<field name="gmapfp_html_bubble" type="radio" default="0" label="COM_GMAPFP_HTML_BUBBLE" description="COM_GMAPFP_HTML_BUBBLE_DESC" layout="joomla.form.field.radio.switcher"
+>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="gmapfp_plus_detail" type="radio" default="1" label="COM_GMAPFP_PLUS_DETAIL" description="COM_GMAPFP_PLUS_DETAIL_DESC" layout="joomla.form.field.radio.switcher"
+>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="target" type="list" default="0" label="COM_GMAPFP_POPUP" description="COM_GMAPFP_POPUP_DESC" showon="gmapfp_plus_detail:1">
+			<option value="0">LightBox</option>
+			<option value="1">Parent Window With Browser Navigation</option>
+			<option value="2">New Window With Browser Navigation</option>
+			<option value="3">New Window Without Browser Navigation</option>
+		</field>
+		<field 
+			name="gmapfp_hauteur_lightbox" 
+			type="text" 
+			default="400" 
+			label="COM_GMAPFP_HAUTEUR_LIGHTBOX" 
+			size="10" 
+			description="COM_GMAPFP_HAUTEUR_LIGHTBOX_DESC" 
+			showon="gmapfp_plus_detail:1"
+		/>
+		<field 
+			name="gmapfp_largeur_lightbox" 
+			type="text" 
+			default="700" 
+			label="COM_GMAPFP_LARGEUR_LIGHTBOX" 
+			size="10" 
+			description="COM_GMAPFP_LARGEUR_LIGHTBOX_DESC" 
+			showon="gmapfp_plus_detail:1"
+		/>
+
+	</fieldset>
+	
+	<fieldset
+		name="images"
+		label="COM_GMAPFP_CONF_IMAGES"
+		description="COM_GMAPFP_IMAGE_ZONE">
+		
+		<field 
+			name="gmapfp_largeur_img_cat" 
+			type="integer" 
+			first="1" 
+			last="12" 
+			step="1" 
+			default="2" 
+			label="COM_GMAPFP_LARGEUR_IMG_GAL" 
+			description="COM_GMAPFP_LARGEUR_IMG_DESC" 
+		/>
+		<field 
+			name="gmapfp_largeur_img_art" 
+			type="integer" 
+			first="1" 
+			last="12" 
+			step="1" 
+			default="5" 
+			label="COM_GMAPFP_LARGEUR_IMG_MAIN" 
+			description="COM_GMAPFP_LARGEUR_IMG_DESC" 
+		/>
+
+	</fieldset>
+
+	<fieldset
+		name="articles"
+		label="COM_GMAPFP_CONFIG_ARTICLE_SETTINGS_LABEL"
+		description="COM_GMAPFP_CONFIG_ARTICLE_SETTINGS_DESC"
+		>
+		
+		<field
+			name="article_layout"
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			class="custom-select"
+			menuitems="true"
+			extension="com_gmapfp"
+			view="item"
+		/>
+
+		<field
+			name="spacer_show_icons"
+			type="spacer"
+			hr="true"
+		/>
+		
+		<field name="show_email_form" type="radio" default="1" label="COM_GMAPFP_AFFICHER_ICON_MSG" description="COM_GMAPFP_AFFICHER_ICON_MSG_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_hp_form" type="radio" default="1" label="COM_GMAPFP_AFFICHER_ICON_HORAIRES_PRIX" description="COM_GMAPFP_AFFICHER_ICON_HORAIRES_PRIX_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_map_form" type="radio" default="1" label="COM_GMAPFP_AFFICHER_ICON_CARTE" description="COM_GMAPFP_AFFICHER_ICON_CARTE_DESC" layout="joomla.form.field.radio.switcher">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field
+			name="spacer_title"
+			type="spacer"
+			hr="true"
+		/>
+
+		<field
+			name="show_title"
+			type="radio"
+			label="JGLOBAL_SHOW_TITLE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_titles"
+			type="radio"
+			label="JGLOBAL_LINKED_TITLES_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_title:1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="info_block_position"
+			type="list"
+			label="COM_GMAPFP_FIELD_INFOBLOCK_POSITION_LABEL"
+			default="0"
+			>
+			<option value="0">COM_GMAPFP_FIELD_OPTION_ABOVE</option>
+			<option value="1">COM_GMAPFP_FIELD_OPTION_BELOW</option>
+			<option value="2">COM_GMAPFP_FIELD_OPTION_SPLIT</option>
+		</field>
+
+		<field
+			name="coordinates_icons"
+			type="list"
+			label="COM_GMAPFP_FIELD_ICONS_SETTINGS_LABEL"
+			default="0"
+			>
+			<option value="0">COM_GMAPFP_FIELD_VALUE_ICONS</option>
+			<option value="1">COM_GMAPFP_FIELD_VALUE_TEXT</option>
+			<option value="2">COM_GMAPFP_FIELD_VALUE_NONE</option>
+		</field>
+
+		<field
+			name="info_block_show_title"
+			type="radio"
+			label="COM_GMAPFP_FIELD_INFOBLOCK_TITLE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_category"
+			type="radio"
+			label="JGLOBAL_SHOW_CATEGORY_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_category"
+			type="radio"
+			label="JGLOBAL_LINK_CATEGORY_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_category:1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_parent_category"
+			type="radio"
+			label="JGLOBAL_SHOW_PARENT_CATEGORY_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_parent_category"
+			type="radio"
+			label="JGLOBAL_LINK_PARENT_CATEGORY_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_parent_category:1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="spacer1"
+			type="spacer"
+			hr="true"
+		/>
+
+		<field
+			name="show_associations"
+			type="radio"
+			label="JGLOBAL_SHOW_ASSOCIATIONS_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="flags"
+			type="radio"
+			label="JGLOBAL_SHOW_FLAG_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_associations:1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="spacer2"
+			type="spacer"
+			hr="true"
+		/>
+
+		<field
+			name="show_author"
+			type="radio"
+			label="JGLOBAL_SHOW_AUTHOR_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_author"
+			type="radio"
+			label="JGLOBAL_LINK_AUTHOR_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			showon="show_author:1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_create_date"
+			type="radio"
+			label="JGLOBAL_SHOW_CREATE_DATE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_modify_date"
+			type="radio"
+			label="JGLOBAL_SHOW_MODIFY_DATE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_publish_date"
+			type="radio"
+			label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_item_navigation"
+			type="radio"
+			label="JGLOBAL_SHOW_NAVIGATION_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_readmore"
+			type="radio"
+			label="JGLOBAL_SHOW_READMORE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_readmore_title"
+			type="radio"
+			label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_readmore:1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="readmore_limit"
+			type="number"
+			label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL"
+			default="100"
+			showon="show_readmore:1[AND]show_readmore_title:1"
+		/>
+
+		<field
+			name="spacer3"
+			type="spacer"
+			hr="true"
+		/>
+
+		<field
+			name="show_hits"
+			type="radio"
+			label="JGLOBAL_SHOW_HITS_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="record_hits"
+			type="radio"
+			label="JGLOBAL_RECORD_HITS_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_noauth"
+			type="radio"
+			label="JGLOBAL_SHOW_UNAUTH_LINKS_LABEL"
+			description="JGLOBAL_SHOW_UNAUTH_LINKS_DESC"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	
+	<fieldset
+		name="category"
+		label="JCATEGORY"
+		description="COM_GMAPFP_CONFIG_CATEGORY_SETTINGS_DESC"
+		>
+		<field
+			name="category_layout"
+			type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			class="custom-select"
+			menuitems="true"
+			extension="com_gmapfp"
+			view="category"
+		/>
+
+		<field
+			name="show_category_heading_title_text"
+			type="radio"
+			label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_category_title"
+			type="radio"
+			label="JGLOBAL_SHOW_CATEGORY_TITLE"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_description"
+			type="radio"
+			label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_description_image"
+			type="radio"
+			label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="maxLevel"
+			type="list"
+			label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+			default="-1"
+			validate="options"
+			>
+			<option value="0">JNONE</option>
+			<option value="-1">JALL</option>
+			<option value="1">J1</option>
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="5">J5</option>
+		</field>
+
+		<field
+			name="show_empty_categories"
+			type="radio"
+			label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_no_articles"
+			type="radio"
+			label="COM_GMAPFP_NO_ARTICLES_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_subcat_desc"
+			type="radio"
+			label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+			default="1"
+			layout="joomla.form.field.radio.switcher"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_cat_num_articles"
+			type="radio"
+			label="COM_GMAPFP_NUMBER_CATEGORY_ITEMS_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_cat_tags"
+			type="radio"
+			label="COM_GMAPFP_FIELD_SHOW_CAT_TAGS_LABEL"
+			default="1"
+			layout="joomla.form.field.radio.switcher"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="map_position"
+			type="list"
+			label="COM_GMAPFP_FIELD_MAP_POSITION_LABEL"
+			default="1"
+			validate="options"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">COM_GMAPFP_FIELD_MAP_POSITION_TOP_LABEL</option>
+			<option value="2">COM_GMAPFP_FIELD_MAP_POSITION_BOTTOM_LABEL</option>
+		</field>
+	</fieldset>
+	
+	<fieldset
+		name="blog_default_parameters"
+		label="COM_GMAPFP_CONFIG_BLOG_SETTINGS_LABEL"
+		description="COM_GMAPFP_CONFIG_BLOG_SETTINGS_DESC"
+		>
+		<field
+			name="num_leading_articles"
+			type="number"
+			label="JGLOBAL_NUM_LEADING_ARTICLES_LABEL"
+			default="1"
+		/>
+
+		<field
+			name="num_intro_articles"
+			type="number"
+			label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
+			default="4"
+		/>
+
+		<field
+			name="num_links"
+			type="number"
+			label="JGLOBAL_NUM_LINKS_LABEL"
+			default="4"
+		/>
+
+		<field
+			name="spacer_show_subcategory_content"
+			type="spacer"
+			hr="true"
+		/>
+
+		<field
+			name="show_subcategory_content"
+			type="list"
+			label="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_LABEL"
+			default="0"
+			validate="options"
+			>
+			<option value="0">JNONE</option>
+			<option value="-1">JALL</option>
+			<option value="1">J1</option>
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="5">J5</option>
+		</field>
+	</fieldset>
+
+	<fieldset
+		name="category_list"
+		label="JGLOBAL_LIST_LAYOUT_OPTIONS"
+		description="COM_GMAPFP_FIELD_CONFIG_TABLE_OF_ITEMS_DESC"
+		>
+		<field
+			name="show_pagination_limit"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_DISPLAY_SELECT_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+ 			name="filter_field"
+ 			type="list"
+ 			label="JGLOBAL_FILTER_FIELD_LABEL"
+ 			default="hide"
+			validate="options"
+ 			>
+			<option value="hide">JHIDE</option>
+			<option value="title">JGLOBAL_TITLE</option>
+			<option value="author">JAUTHOR</option>
+			<option value="hits">JGLOBAL_HITS</option>
+ 		</field>
+
+		<field
+			name="show_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_SHOW_HEADINGS_LABEL"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_image_heading"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_SHOW_IMAGE_LABEL"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_email_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_EMAIL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_telephone_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_PHONE_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_address_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_ADRESSE_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_suburb_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_SUBURB_LABEL"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_cp_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_CP_LABEL"
+			default="0"
+			showon="show_headings:1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_state_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_STATE_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_country_headings"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="COM_GMAPFP_FIELD_CONFIG_COUNTRY_LABEL"
+			default="1"
+			showon="show_headings:1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="list_show_date"
+			type="list"
+			label="JGLOBAL_SHOW_DATE_LABEL"
+			default="0"
+			validate="options"
+			>
+			<option value="0">JHIDE</option>
+			<option value="created">JGLOBAL_CREATED</option>
+			<option value="modified">JGLOBAL_MODIFIED</option>
+			<option value="published">JPUBLISHED</option>
+		</field>
+
+		<field
+			name="date_format"
+			type="text"
+			label="JGLOBAL_DATE_FORMAT_LABEL"
+			description="JGLOBAL_DATE_FORMAT_DESC"
+			size="15"
+		/>
+
+		<field
+			name="list_show_hits"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_LIST_HITS_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="list_show_author"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_LIST_AUTHOR_LABEL"
+			default="0"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_pagination"
+			type="list"
+			label="JGLOBAL_PAGINATION_LABEL"
+			default="2"
+			validate="options"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">JGLOBAL_AUTO</option>
+		</field>
+
+		<field
+			name="show_pagination_results"
+			type="radio"
+			layout="joomla.form.field.radio.switcher"
+			label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+			default="1"
+			showon="show_pagination:1,2"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+ 			name="contacts_display_num"
+ 			type="list"
+ 			label="JGLOBAL_NUMBER_ITEMS_LIST_LABEL"
+ 			default="10"
+			validate="options"
+ 			>
+ 			<option value="5">J5</option>
+ 			<option value="10">J10</option>
+ 			<option value="15">J15</option>
+ 			<option value="20">J20</option>
+ 			<option value="25">J25</option>
+ 			<option value="30">J30</option>
+ 			<option value="50">J50</option>
+ 			<option value="100">J100</option>
+ 			<option value="0">JALL</option>
+ 		</field>
+
+		<field
+			name="orderby_pri"
+			type="list"
+			label="JGLOBAL_CATEGORY_ORDER_LABEL"
+			default="none"
+			validate="options"
+			>
+			<option value="none">JGLOBAL_NO_ORDER</option>
+			<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+		</field>
+		
+		<field
+			name="orderby_sec"
+			type="list"
+			label="JGLOBAL_ARTICLE_ORDER_LABEL"
+			default="alpha"
+			validate="options"
+			>
+			<option value="front">COM_GMAPFP_FEATURED_ORDER</option>
+			<option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+			<option value="date">JGLOBAL_OLDEST_FIRST</option>
+			<option value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+			<option value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+			<option value="hits">JGLOBAL_MOST_HITS</option>
+			<option value="rhits">JGLOBAL_LEAST_HITS</option>
+			<option value="random">JGLOBAL_RANDOM_ORDER</option>
+			<option value="order">JGLOBAL_ORDERING</option>
+			<option	value="rorder">JGLOBAL_REVERSE_ORDERING</option>
+		</field>
+		
+		<field
+ 			name="show_featured"
+ 			type="list"
+ 			label="JGLOBAL_SHOW_FEATURED_ARTICLES_LABEL"
+ 			default="show"
+			validate="options"
+ 			>
+			<option value="show">JSHOW</option>
+			<option value="hide">JHIDE</option>
+			<option value="only">JONLY</option>
+ 		</field>
+	</fieldset>
+	
+	
+	
+	<fieldset
+		name="email"
+		label="COM_GMAPFP_EMAIL_SETTING"
+		description="COM_GMAPFP_EMAIL_SETTING_DESC"
+		>
+		
+		<field
+			name="add_mailto_link"
+			type="radio"
+			label="COM_GMAPFP_FIELD_PARAMS_ADD_MAILTO_LINK_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="1"
+			showon="show_email_form:0"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="captcha"
+			type="plugins"
+			label="COM_GMAPFP_FIELD_CAPTCHA_LABEL"
+			folder="captcha"
+			filter="cmd"
+			useglobal="true"
+			showon="show_email_form:1"
+			>
+			<option value="0">JOPTION_DO_NOT_USE</option>
+		</field>
+
+		<field
+			name="show_email_copy"
+			type="radio"
+			label="COM_GMAPFP_FIELD_EMAIL_EMAIL_COPY_LABEL"
+			default="0"
+			layout="joomla.form.field.radio.switcher"
+			showon="show_email_form:1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="banned_email"
+			type="textarea"
+			label="COM_GMAPFP_FIELD_CONFIG_BANNED_EMAIL_LABEL"
+			description="COM_GMAPFP_FIELD_CONFIG_BANNED_EMAIL_DESC"
+			default=""
+			rows="3"
+			cols="30"
+			showon="show_email_form:1"
+		/>
+
+		<field
+			name="banned_subject"
+			type="textarea"
+			label="COM_GMAPFP_FIELD_CONFIG_BANNED_SUBJECT_LABEL"
+			description="COM_GMAPFP_FIELD_CONFIG_BANNED_SUBJECT_DESC"
+			default=""
+			rows="3"
+			cols="30"
+			showon="show_email_form:1"
+		/>
+
+		<field
+			name="banned_text"
+			type="textarea"
+			label="COM_GMAPFP_FIELD_CONFIG_BANNED_TEXT_LABEL"
+			description="COM_GMAPFP_FIELD_CONFIG_BANNED_TEXT_DESC"
+			default=""
+			rows="3"
+			cols="30"
+			showon="show_email_form:1"
+		/>
+
+	</fieldset>
+
+	<fieldset
+		name="autre"
+		label="COM_GMAPFP_CONF_AUTRES_KML">
+		
+		<field
+			name="save_history"
+			type="radio"
+			label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL"
+			layout="joomla.form.field.radio.switcher"
+			default="0"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="history_limit"
+			type="number"
+			label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL"
+			filter="integer"
+			default="10"
+			showon="save_history:1"
+		/>
+
+		<field 
+			type="spacer" 
+			name="COM_GMAPFP_GMAPFP_ZONE" 
+			hr="true"
+		/>
+		
+		<field 
+			name="gmapfp_news" 
+			type="radio" 
+			default="1" 
+			label="COM_GMAPFP_NEWS" 
+			description="COM_GMAPFP_NEWS_DESC" 
+			layout="joomla.form.field.radio.switcher"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field 
+			name="COM_GMAPFP_XML_ZONE"
+			type="spacer"
+			hr="true"
+		/>
+		
+		<field name="gmapfp_geoXML" type="textarea" default="" label="COM_GMAPFP_GEO_XML" cols="46" rows="4" description="COM_GMAPFP_GEO_XML_DESC" />
+
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_gmapfp"
+			section="component" />
+	</fieldset>
+</config>
+	

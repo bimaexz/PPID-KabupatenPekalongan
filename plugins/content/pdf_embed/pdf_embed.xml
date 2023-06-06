@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="content" method="upgrade">
+	<name>pdf_embed</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>www.techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2010 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>8th November 2021</creationDate>
+	<version>3.0.0</version>
+	<description>PLG_PDF_EMBED_DESC</description>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.ini</language>
+		<language tag="en-GB">en-GB.plg_content_pdf_embed.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="pdf_embed">pdf_embed.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+	<media folder="media" destination="pdf_embed">
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/content/pdf_embed/assets/elements">
+				<field name="viewer" type="list" default="native" description="PLG_CONTENT_PDF_EMBED_SELECT_DEFAULT_VIEWER_DESC" label="PLG_CONTENT_PDF_EMBED_SELECT_DEFAULT_VIEWER">
+					<option value="native">native</option>
+					<option value="google">google</option>
+					<option value="pdfjs">pdfjs</option>
+					<option value="adobe">adobe</option>
+				</field>
+
+				<!-- Adobe configuration fields-->
+				<field 
+					name="clientid"
+					type="text"
+					default=""
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_CLIENT_ID"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_CLIENT_ID_DESC"
+					showon="viewer:adobe"/>
+				<field 
+					name="adobe_client_id_note"
+					type="note"
+					id="adobe_client_id_note"
+					label=""
+					default=""
+					hint=""
+					showon="viewer:adobe"/>
+				<field 
+					name="enableLinearization"
+					type="radio"
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_ENABLE_LINEARIZATION"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_ENABLE_LINEARIZATION_DESC"
+					default="0"
+					class="btn-group btn-group-yesno"
+					showon="viewer:adobe">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="embedmode"
+					type="list"
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_EMBED_MODE"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_EMBED_MODE_DESC"
+					default="FULL_WINDOW"
+					class="btn-group btn-group-yesno"
+					showon="viewer:adobe">
+					<option value="FULL_WINDOW">PLG_CONTENT_PDF_EMBED_ADOBE_EMBED_MODE_FULL_WINDOW</option>
+					<option value="SIZED_CONTAINER">PLG_CONTENT_PDF_EMBED_ADOBE_EMBED_MODE_SIZED_CONTAINER</option>
+					<option value="IN_LINE">PLG_CONTENT_PDF_EMBED_ADOBE_EMBED_MODE_IN_LINE</option>
+				</field>
+
+				<field
+					name="pagecontrol"
+					type="radio"
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_SHOW_PAGE_CONTROL"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_SHOW_PAGE_CONTROL_DESC"
+					default="0"
+					class="btn-group btn-group-yesno"
+					showon="viewer:adobe[AND]embedmode:FULL_WINDOW">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="leftpanel"
+					type="radio"
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_SHOW_LEFT_PANEL"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_SHOW_LEFT_PANEL_DESC"
+					default="0"
+					class="btn-group btn-group-yesno"
+					showon="viewer:adobe[AND]embedmode:FULL_WINDOW">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!-- PDFJS and for Adobejs configuration fields-->
+				<field
+					name="download"
+					type="radio"
+					label="PLG_CONTENT_PDF_EMBED_DOWNLOAD_FUNCTIONALITY"
+					description="PLG_CONTENT_PDF_EMBED_DOWNLOAD_FUNCTIONALITY_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					showon="viewer:pdfjs[OR]viewer:adobe">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="print"
+					type="radio"
+					label="PLG_CONTENT_PDF_EMBED_PRINT_FUNCTIONALITY"
+					description="PLG_CONTENT_PDF_EMBED_PRINT_FUNCTIONALITY_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					showon="viewer:pdfjs[OR]viewer:adobe">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="languagemode"
+					type="list"
+					label="PLG_CONTENT_PDF_EMBED_ADOBE_LANGUAGE_MODE"
+					description="PLG_CONTENT_PDF_EMBED_ADOBE_LANGUAGE_MODE_DESC"
+					default="en-GB"
+					class="btn-group btn-group-yesno"
+					showon="viewer:adobe">
+					<option value="da-DK">Danish</option>
+					<option value="nl-NL">Dutch</option>
+					<option value="en-GB">English (United Kingdom)</option>
+					<option value="en-US">English (United States)</option>
+					<option value="fi-FI">Finnish</option>
+					<option value="fr-FR">French</option>
+					<option value="de-DE">German</option>
+					<option value="it-IT">Italian</option>
+					<option value="ja-JP">Japanese</option>
+					<option value="nb-NO">Norwegian</option>
+					<option value="pt-BR">Portuguese</option>
+					<option value="es-ES">Spanish</option>
+					<option value="sv-SE">Swedish</option>
+					<option value="cs-CZ">Czech</option>
+					<option value="ko-KR">Korean</option>
+					<option value="pl-PL">Polish</option>
+					<option value="ru-RU">Russian</option>
+					<option value="tr-TR">Turkish</option>
+					<option value="zh-CN">Chinese (PRC)</option>
+					<option value="zh-TW">Chinese (Taiwan)</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

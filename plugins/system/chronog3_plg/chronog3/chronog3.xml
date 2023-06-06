@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="1.7.0">
+	<name>ChronoG3</name>
+	<libraryname>chronog3</libraryname>
+	<author>ChronoEngine.com</author>
+	<creationDate>2020</creationDate>
+	<copyright>Copyright (C) 2020</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>webmaster@chronoengine.com</authorEmail>
+	<authorUrl>www.chronoengine.com</authorUrl>
+	<version>3.0.0</version>
+	<description>The G3 framework classes!</description>
+	
+	<files>
+		<filename>bootstrap.php</filename>
+		<filename>configuration.php</filename>
+		<filename>gcloader.php</filename>
+		<filename>chronog3.xml</filename>
+		<filename>LICENSE_GPL.txt</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>extensions</folder>
+		<folder>cache</folder>
+		<folder>helpers</folder>
+		<folder>libs</folder>
+		<folder>locales</folder>
+		<folder>vendors</folder>
+		<folder>layouts</folder>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="CEGCore v3 update server">http://www.chronoengine.com/chrono_joomla_updates/chronog3.xml</server>
+	</updateservers>
+</extension>

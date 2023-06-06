@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="gmapfp-geocoding" method="upgrade">
+	<name>plg_gmapfp-geocoding_ersi</name>
+	<author>Fabrice4821</author>
+	<creationDate>Octobre 2020</creationDate>
+	<copyright>Copyright (C) 2011 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>webmaster@gmapfp.org</authorEmail>
+	<authorUrl>www.gmapfp.org</authorUrl>
+	<version>4.0.0</version>
+	<description>PLG_GMAPFP-GEOCODING_ERSI_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="ersi">ersi.php</filename>
+		<filename plugin="ersi">geocoding.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_gmapfp-geocoding_ersi.ini</language>
+		<language tag="en-GB">language/en-GB/plg_gmapfp-geocoding_ersi.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_gmapfp-geocoding_ersi.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_gmapfp-geocoding_ersi.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="gmapfp_geocoding_config" 
+					type="subform"
+					formsource="plugins/gmapfp-geocoding/ersi/geocoding.xml" 
+					label="GMAPFP-GEOCODING_PARAMETER"
+					default=""
+					filter="raw"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

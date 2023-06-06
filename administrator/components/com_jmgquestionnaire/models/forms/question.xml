@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields" >
+
+		<field
+			name="id"
+			type="number"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			default="0"
+			class="readonly"
+			readonly="true"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			default="1"
+			class="chzn-color-state"
+			size="1"
+			>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		
+		<field name="parent_id" 
+			type="parentquestionsoptions"
+			label="COM_JMGQUESTIONNAIRE_PARENT_QUESTION_SELECT"
+		/>
+					
+		<field
+			name="questionsordering"
+			type="questionsordering"
+			label="COM_JMGQUESTIONNAIRE_ORDERING_LABEL"
+			filter="int"
+			size="1">
+		</field>
+		
+		<field
+			name="image"
+			type="media"
+			label="COM_JMGQUESTIONNAIRE_IMAGE"
+		/>
+		
+		<field
+			name="imagepos"
+			type="list"
+			label="COM_JMGQUESTIONNAIRE_IMAGE_POS"
+			default="1"
+			size="1"
+			>
+			<option value="top">COM_JMGQUESTIONNAIRE_IMAGE_POS_TOP</option>
+			<option value="right">COM_JMGQUESTIONNAIRE_IMAGE_POS_RIGHT</option>
+			<option value="bottom">COM_JMGQUESTIONNAIRE_IMAGE_POS_BOTTOM</option>
+			<option value="left">COM_JMGQUESTIONNAIRE_IMAGE_POS_LEFT</option>
+		</field>
+		
+		<field
+			name="level"
+			type="hidden"
+			filter="unset"
+		/>
+		
+		<field
+			name="lft"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="rgt"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="language"
+			type="hidden"
+			value="*"
+		/>
+
+		<field
+			name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			labelclass="control-label"
+			class="span12"
+			size="45"
+			maxlength="255"
+		/>
+
+		<field
+			name="numarticles"
+			type="number"
+			label="COM_JMGQUESTIONNAIRE_FIELD_NUM_ARTICLES_LABEL"
+			description="COM_JMGQUESTIONNAIRE_FIELD_NUM_ARTICLES_DESC"
+			default="5"
+			size="2"
+		/>
+
+		<field
+			name="cache_time"
+			type="number"
+			label="COM_JMGQUESTIONNAIRE_FIELD_CACHETIME_LABEL"
+			description="JGLOBAL_FIELD_FIELD_CACHETIME_DESC"
+			default="3600"
+			size="4"
+		/>
+
+		<field
+			name="created"
+			type="calendar"
+			label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="created_by"
+			type="user"
+			label="JGLOBAL_FIELD_Created_by_Label"
+			description="JGLOBAL_FIELD_CREATED_BY_DESC"
+		/>
+
+		<field
+			name="created_by_alias"
+			type="text"
+			label="JGLOBAL_FIELD_Created_by_alias_Label"
+			description="JGLOBAL_FIELD_CREATED_BY_ALIAS_DESC"
+			size="20"
+		/>
+
+		<field
+			name="modified"
+			type="calendar"
+			label="JGLOBAL_FIELD_Modified_Label"
+			description="COM_NEWSFEEDS_FIELD_MODIFIED_DESC"
+			class="readonly"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			readonly="true"
+			filter="user_utc"
+		/>
+
+		<field
+			name="modified_by"
+			type="user"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			description="COM_JMGQUESTIONNAIRE_FIELD_MODIFIED_BY_DESC"
+			class="readonly"
+			readonly="true"
+			filter="unset"
+		/>
+
+		<field
+			name="version"
+			type="text"
+			label="COM_JMGQUESTIONNAIRE_FIELD_VERSION_LABEL"
+			description="COM_JMGQUESTIONNAIRE_FIELD_VERSION_DESC"
+			class="readonly"
+			size="6"
+			readonly="true"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out"
+			type="Text"
+			label="JGLOBAL_FIELD_CHECKEDOUT_LABEL"
+			description="JGLOBAL_FIELD_CHECKEDOUT_DESC"
+			size="6"
+			readonly="true"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out_time"
+			type="Text"
+			label="JGLOBAL_FIELD_CHECKEDOUT_TIME_LABEL"
+			description="JGLOBAL_FIELD_CHECKEDOUT_TIME_DESC"
+			size="6"
+			readonly="true"
+			filter="unset"
+		/>
+
+		<field
+			name="publish_up"
+			type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_UP_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_UP_DESC"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="publish_down"
+			type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			rows="3"
+			cols="30"
+		/>
+
+		<field
+			name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			rows="3"
+			cols="30"
+		/>
+
+		<field
+			name="xreference"
+			type="text"
+			label="JFIELD_XREFERENCE_LABEL"
+			description="JFIELD_XREFERENCE_DESC"
+			size="20"
+		/>
+		
+	</fieldset>
+	
+	<fieldset name="settings" label="COM_JMGQUESTIONNAIRE_SETTINGS">
+		
+		<field name="questionnaireid" 
+			type="questionnairesoptions"
+			required="true"
+			label="COM_JMGQUESTIONNAIRE_QUESTIONNAIRE_SELECT"
+			class="input-xxlarge"
+		/>
+		
+		<field
+			name="name"
+			type="textarea"
+			label="COM_JMGQUESTIONNAIRE_QUESTION"
+			hint="COM_JMGQUESTIONNAIRE_NEW_QUESTION_DESC"
+			rows="3"
+			cols="30"
+			class="input-xxlarge"
+			required="true"
+		/>
+
+		<field
+			name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			size="45"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+		/>
+		
+		<field
+			name="explanation"
+			type="textarea"
+			label="COM_JMGQUESTIONNAIRE_EXPLANATION"
+			hint="COM_JMGQUESTIONNAIRE_EXPLANATION_DESC"
+			class="input-xxlarge"
+			size="40"
+			required="false"
+		/>
+		
+		<field
+			name="questioningid"
+			type="list"
+			label="COM_JMGQUESTIONNAIRE_QUESTIONING_TECHNIQUE"
+			default="1"
+			size="1"
+			>
+			<option value="1">COM_JMGQUESTIONNAIRE_SINGLE_CHOICE</option>
+			<option value="2">COM_JMGQUESTIONNAIRE_MULTIPLE_CHOICE</option>
+			<option value="3">COM_JMGQUESTIONNAIRE_OPEN_QUESTIONS</option>
+			<option value="4">COM_JMGQUESTIONNAIRE_CLOSED_QUESTIONS</option>
+		</field>	
+		
+		<field
+			name="score"
+			type="text"
+			label="COM_JMGQUESTIONNAIRE_POINTS"
+			hint="COM_JMGQUESTIONNAIRE_POINTS_DESC"
+			size="20"
+		/>	
+
+		<field
+			name="description"
+			type="hidden"
+		/>
+		
+		<field
+			name="image_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="qng4imageyes_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="qng4imageno_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="qng5imageyes_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="qng5imageno_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="qng5imageperhaps_title"
+			type="hidden"
+		/>
+		
+		<field
+			name="page_description"
+			type="hidden"
+		/>
+		
+	</fieldset>
+
+	<fields name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+
+		<fieldset name="jmetadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+
+			<field
+				name="robots"
+				type="list"
+				label="JFIELD_METADATA_ROBOTS_LABEL"
+				description="JFIELD_METADATA_ROBOTS_DESC"
+				>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+				<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+				<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+				<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+			</field>
+
+			<field
+				name="rights"
+				type="text"
+				label="JFIELD_META_RIGHTS_LABEL"
+				description="JFIELD_META_RIGHTS_DESC"
+				rows="2"
+				cols="30"
+				filter="string"
+			/>
+
+			<field
+				name="hits"
+				type="number"
+				label="JGLOBAL_HITS"
+				description="COM_NEWSFEEDS_HITS_DESC"
+				class="readonly"
+				size="6"
+				readonly="true"
+				filter="unset"
+			/>
+		</fieldset>
+	</fields>
+</form>

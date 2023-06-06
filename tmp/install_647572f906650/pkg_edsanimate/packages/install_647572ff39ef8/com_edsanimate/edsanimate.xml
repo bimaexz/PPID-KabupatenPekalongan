@@ -1,0 +1,22 @@
+<extension type="component" version="2.5" method="upgrade">
+ 
+        <name>com_edsanimate</name>
+        <!-- The following elements are optional and free of formatting constraints -->
+        <creationDate>Aug 2014</creationDate>
+        <author>eLEOPARD Design Studios Pvt Ltd.</author>
+        <authorEmail>support@eleopard.in</authorEmail>
+        <authorUrl>http://www.eleopard.in</authorUrl>
+        <copyright>(C) 2014 eLEOPARD Design Studios Pvt Ltd. All rights reserved</copyright>
+        <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+        <!--  The version string is recorded in the components table -->
+        <version>2.4.0</version>
+        <!-- The description is optional and defaults to the name -->
+        <description>Installer Component</description>
+        <scriptfile>script.php</scriptfile>
+        
+        <administration>
+        		<files>										
+					<filename>index.html</filename>					
+				</files>
+        </administration>
+</extension>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+    <name>Animate It! Package</name>
+    <creationDate>Aug 2014</creationDate>
+    <author>eLEOPARD Design Studios Pvt Ltd.</author>
+    <authorEmail>support@eleopard.in</authorEmail>
+    <url>http://www.eleopard.in</url>    
+    <packagename>edsanimate</packagename>
+    <copyright>(C) 2014 eLEOPARD Design Studios Pvt Ltd. All rights reserved</copyright>
+   <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>2.4.0</version>    
+    <packager>eLEOPARD Dessign Studios Development Team</packager>
+    <packagerurl>http://www.eleopard.in/</packagerurl>
+    <description>Package containing all the Animate It! related plugins and a installer</description>
+    <files folder="packages">
+        <file type="plugin" id="edsanimate" group="system">plg_system_edsanimate.zip</file>
+        <file type="plugin" id="edsanimate" group="editors-xtd">plg_editors-xtd_edsanimate.zip</file>
+        <file type="plugin" id="edsanimate" group="content">plg_content_edsanimate.zip</file>
+        <file type="component" id="edsanimate" >com_edsanimate.zip</file>
+    </files>
+</extension>

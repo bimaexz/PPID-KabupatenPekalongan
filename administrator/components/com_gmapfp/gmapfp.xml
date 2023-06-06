@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+
+	<name>COM_GMAPFP</name>
+	<creationDate>Février 2023</creationDate>
+	<author>Fabrice4821</author>
+	<authorEmail>webmaster@gmapfp.org</authorEmail>
+	<authorUrl>http://www.gmapfp.org</authorUrl>
+	<copyright>All rights reserved</copyright>
+	<license>GNU/GPL</license>
+	<version>J4.10F</version>
+	<namespace path="src">Joomla\Component\Gmapfp</namespace>
+    <scriptfile>script.php</scriptfile>
+	
+	<install>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/mysql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/mysql/uninstall.sql</file>
+        </sql>
+    </uninstall>    
+ 
+    <files folder="site">
+		<folder>forms</folder>
+		<folder>layouts</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+    </files>
+    <media folder="media" destination="com_gmapfp">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>imagesfolder</folder>
+        <folder>js</folder>
+		<filename>joomla.asset.json</filename>
+    </media>
+
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/com_gmapfp.ini</language>
+        <language tag="fr-FR">language/fr-FR/com_gmapfp.ini</language>
+    </languages>
+
+	<administration>
+		<menu img="class:gmapfp">com_gmapfp</menu>
+        <submenu>
+            <menu img="class:gmapfp-cpanel" link="option=com_gmapfp" view="accueil" alt="GMapFP/Accueil">com_gmapfp_accueil</menu>
+            <menu img="class:gmapfp" link="option=com_gmapfp&amp;view=items" view="items" alt="GMapFP/Lieux">com_gmapfp_lieux</menu>
+            <menu img="class:gmapfp-marqueur" link="option=com_gmapfp&amp;view=marqueurs" view="marqueur" alt="GMapFP/Marqueur">com_gmapfp_marqueurs</menu>
+            <menu img="class:gmapfp-cat" link="option=com_categories&amp;view=categories&amp;extension=com_gmapfp" view="categories" alt="GMapFP/Categories">com_gmapfp_categories</menu>
+            <menu img="class:gmapfp-perso" link="option=com_gmapfp&amp;view=personnalisations" view="personnalisations" alt="GMapFP/Personnalisation">com_gmapfp_personnalisation</menu>
+            <menu img="class:gmapfp-css" link="option=com_gmapfp&amp;view=css" view="css" alt="GMapFP/CSS">com_gmapfp_css</menu>
+        </submenu>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/com_gmapfp.ini</language>
+            <language tag="en-GB">language/en-GB/com_gmapfp.sys.ini</language>
+            <language tag="fr-FR">language/fr-FR/com_gmapfp.ini</language>
+            <language tag="fr-FR">language/fr-FR/com_gmapfp.sys.ini</language>
+        </languages>    
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>forms</folder>
+			<folder>helpers</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="2" name="GMapFP J4 Free Update Server">http://gmapfp.org/updates/gmapfp4_updater.xml</server>
+	</updateservers>
+</extension>
